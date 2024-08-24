@@ -25,8 +25,8 @@
     margin: 0 15%;
     justify-content: space-between;
     width: 40%;
-
     .menu-item {
+      color: white;
     }
   }
 
@@ -35,7 +35,8 @@
     justify-content: space-between;
     width: 8%;
 
-    .op-container {
+    span {
+      color: white !important;
     }
   }
 }

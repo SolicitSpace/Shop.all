@@ -1,0 +1,38 @@
+.banner-content-container {
+  position: relative;
+  //   border: solid 1px chartreuse;
+  height: 70vmin;
+  width: 100%;
+
+  .bg-img {
+  }
+  .banner-details-container {
+    position: absolute;
+    // border: solid 1px red;
+    width: 40%;
+    left: 6%;
+    top: 50%;
+    width: 25%;
+    transform: translate(0%, -50%);
+    .banner-lbl {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fe628d;
+    }
+    .banner-header {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .banner-desc {
+      font-size: 12px;
+    }
+  }
+
+  .shop-now-btn {
+    button {
+
+        margin-top: 2%;
+    }
+  }
+}
