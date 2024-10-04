@@ -1,1 +1,90 @@
-<p>new-arrivals works!</p>
+<div class="container">
+    <div class="top-section">
+        <p class="title">New Arrivals</p>
+        <div class="nav-btn-container">
+            <p-button class="btn-white shop-now-btn" label="View All Products" icon="pi pi-arrow-right"
+                iconPos="right"></p-button>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <div class="major-arrival-container">
+            <img src="./assets/major_new_arrival.webp" alt="">
+            <div class="ops-container">
+
+                <p class="product-title">Apple iPhone 16 Pro 256gb</p>
+                <p-button class="btn-white shop-now-btn" label="Shop Now" icon="pi pi-arrow-right"
+                    iconPos="right"></p-button>
+            </div>
+
+        </div>
+        <div class="minor-arrivals-container">
+
+            <ng-container *ngFor="let product of productsList">
+                <div class="minor-arrival-container">
+                    <div class="thumb-container">
+                        <img [src]="product.image" alt="">
+                    </div>
+                    <div class="details-container">
+                        <div class="product-title">{{product.title}}</div>
+                        <div class="product-rating">
+                            <i class="pi" [ngClass]="global.handleRatingState(1, product)" style="font-size: 1rem"></i>
+                            <i class="pi" [ngClass]="global.handleRatingState(2, product)" style="font-size: 1rem"></i>
+                            <i class="pi" [ngClass]="global.handleRatingState(3, product)" style="font-size: 1rem"></i>
+                            <i class="pi" [ngClass]="global.handleRatingState(4, product)" style="font-size: 1rem"></i>
+                            <i class="pi" [ngClass]="global.handleRatingState(5, product)" style="font-size: 1rem"></i>
+                        </div>
+                        <div class="product-price">${{ product.price }}</div>
+                    </div>
+                </div>
+            </ng-container>
+            <!-- <div class="minor-arrival-container">
+                <div class="thumb-container">
+                    <img src="./assets/major_new_arrival.webp" alt="">
+                </div>
+                <div class="details-container">
+                    <div class="product-title">Apple iPhone 16 Pro 256gb</div>
+                    <div class="product-rating">
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star" style="font-size: 1rem"></i>
+                    </div>
+                    <div class="product-price">$549.00</div>
+                </div>
+            </div>
+            <div class="minor-arrival-container">
+                <div class="thumb-container">
+                    <img src="./assets/major_new_arrival.webp" alt="">
+                </div>
+                <div class="details-container">
+                    <div class="product-title">Apple iPhone 16 Pro 256gb</div>
+                    <div class="product-rating">
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star" style="font-size: 1rem"></i>
+                    </div>
+                    <div class="product-price">$549.00</div>
+                </div>
+            </div>
+            <div class="minor-arrival-container">
+                <div class="thumb-container">
+                    <img src="./assets/major_new_arrival.webp" alt="">
+                </div>
+                <div class="details-container">
+                    <div class="product-title">Apple iPhone 16 Pro 256gb</div>
+                    <div class="product-rating">
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star-fill" style="font-size: 1rem"></i>
+                        <i class="pi pi-star" style="font-size: 1rem"></i>
+                    </div>
+                    <div class="product-price">$549.00</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  margin: 4% 8%;
+
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    .nav-btn-container {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  .bottom-section {
+    margin-top: 2%;
+    .product-list-container {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      // grid-template-rows: repeat(4, 1fr);
+      gap: 10px;
+      //   background-color: #2196f3;
+
+
+    }
+  }
+}

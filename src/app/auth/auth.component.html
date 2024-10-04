@@ -1,8 +1,38 @@
 <p>auth works!</p>
 
 
-<app-login></app-login>
-<app-register></app-register>
+<!-- <app-login></app-login>
+<app-register></app-register> -->
 
 
-<button (click)="nextPlease()">Next</button>
+<div class="panel-container">
+
+    <div class="form-containers" [@manageFormContainer]="isOpen ? 'showLogin' : 'showRegister'">
+        <div class="login-form-container"></div>
+        <div class="register-form-container"></div>
+    </div>
+    <div class="greetings-container" [@manageGreetingsContainer]="isOpen ? 'showLogin' : 'showRegister'">
+        <div class="title-container">This is a test to check</div>
+        <div class="desc-container"></div>
+        <div class="btns-container"></div>
+    </div>
+
+    <!-- <div class="logo-container">
+        <img src="assets/logo.jpg" alt="logo" />
+    </div> -->
+</div>
+
+
+
+<!-- <button (click)="nextPlease()">Next</button> -->
+
+
+<nav>
+    <button type="button" (click)="toggle()">Toggle Open/Close</button>
+</nav>
+
+
+<!-- Demo for ng animation -->
+<!-- <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div> -->

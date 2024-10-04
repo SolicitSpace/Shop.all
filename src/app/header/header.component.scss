@@ -1,13 +1,18 @@
+.container {
+  position: relative;
+  background-color: black;
+  border-bottom: solid 1px lightgrey;
+}
+
 .header-container {
   position: relative;
-  // border: solid 1px red;
-  border-bottom: solid 1px lightgrey;
-  background-color: black;
-  width: 100%;
   height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  margin: 0 8%;
+  // border: solid white;
 
   .logo-container {
     position: relative;

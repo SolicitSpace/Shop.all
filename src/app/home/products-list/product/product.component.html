@@ -1,0 +1,22 @@
+<div class="product-container">
+    <div class="product-img-container">
+        <img
+            [src]="productDetails.image" />
+        <div class="img-opts">
+            <p-button class="btn-white add-cart-btn" label="Add to Cart"></p-button>
+            <p-button class="btn-white eye-btn" label="" icon="pi pi-eye" iconPos="right" (click)="showProductDetails(productDetails)"></p-button>
+            <p-button class="btn-white heart-btn" label="" icon="pi pi-heart" iconPos="right"></p-button>
+        </div>
+    </div>
+    <p class="product-title">{{productDetails.title}}</p>
+    <p class="product-rating">
+
+
+        <i class="pi" [ngClass]="global.handleRatingState(1, this.productDetails)" style="font-size: 1rem"></i>
+        <i class="pi" [ngClass]="global.handleRatingState(2, this.productDetails)" style="font-size: 1rem"></i>
+        <i class="pi" [ngClass]="global.handleRatingState(3, this.productDetails)" style="font-size: 1rem"></i>
+        <i class="pi" [ngClass]="global.handleRatingState(4, this.productDetails)" style="font-size: 1rem"></i>
+        <i class="pi" [ngClass]="global.handleRatingState(5, this.productDetails)" style="font-size: 1rem"></i>
+    </p>
+    <p class="product-price">${{ productDetails.price }}</p>
+</div>

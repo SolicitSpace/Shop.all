@@ -1,0 +1,80 @@
+.panel-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px chartreuse;
+  width: 80%;
+  height: 80%;
+
+//   display: flex;
+
+   .form-containers {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // flex: 1;
+    background: red;
+    .login-form-container {
+    }
+    .register-form-container {
+    }
+  }
+
+  .greetings-container {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    // right: 0;
+    left: 60%;
+    z-index: 10;
+    // flex: 0.5;
+    background: grey;
+    .title-container {
+      font-size: 2rem;
+    }
+    .desc-container {
+    }
+    .btns-container {
+    }
+  }
+
+  .logo-container {
+  }
+}
+
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.open-close-container {
+  border: 1px solid #dddddd;
+  margin-top: 1em;
+  padding: 20px 20px 0px 20px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+//--------------------
+.test {
+  animation: Test 1.4s forwards ease-out;
+}
+
+@keyframes Test {
+  0% {
+    transform: translate(0%) scaleX(1);
+  }
+  20% {
+    transform: translate(-50%) scaleX(1.5);
+  }
+  100% {
+    transform: translate(-150%) scaleX(1);
+    // width: 40%;
+  }
+}

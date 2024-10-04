@@ -2,19 +2,9 @@ import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
+import { BannerProduct } from '../../@models/products';
 
-export interface Product {
-  id: string;
-  code: string;
-  name: string;
-  description: string;
-  image: string; // Assuming the image can be a URL or a relative path
-  price: number;
-  category: string;
-  quantity: number;
-  inventoryStatus: 'INSTOCK' | 'OUTOFSTOCK' | 'DISCONTINUED'; // Use string literals for predefined statuses
-  rating: number;
-}
+
 
 @Component({
   selector: 'app-banner',
@@ -24,7 +14,7 @@ export interface Product {
   styleUrl: './banner.component.scss',
 })
 export class BannerComponent {
-  products: Product[] = [
+  products: BannerProduct[] = [
     {
       id: '1000',
       code: 'f230fh0g3',

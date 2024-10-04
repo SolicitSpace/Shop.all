@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  height: 70vmin;
+  background-color: #f7c9d3;
+  margin: 5% 8%;
+
+//   display: flex;
+//   justify-content: center;
+  img {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 100%;
+    margin: auto;
+  }
+
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    // width: 55%;
+    margin: 0 8%;
+    /* align-items: center; */
+    height: 100%;
+    // border: solid;
+    justify-content: center;
+    top: 0;
+    .discount-txt {
+        font-weight: 600;
+        color: rgb(255, 61, 116);
+    }
+    .title-txt {
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    .desc-txt {
+        line-height: 2.0;
+    }
+    .shop-now-btn {
+    }
+  }
+}

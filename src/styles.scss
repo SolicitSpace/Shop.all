@@ -47,6 +47,7 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 body {
   margin: 0;
@@ -69,5 +70,17 @@ body {
 .btn-white {
   span {
     color: white !important;
+  }
+}
+
+.cancel-btn {
+  button {
+    background-color: red;
+  }
+}
+
+.btn-block {
+  button {
+    width: 100%;
   }
 }

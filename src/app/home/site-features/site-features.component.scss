@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #faf4f1;
+  padding: 6% 8%;
+  .feature-container {
+    width: calc(100% / 3.6);
+    text-align: center;
+    // border: solid;
+    background-color: white;
+    border-radius: 6px;
+      padding: 2%;
+
+
+    img {
+      position: relative;
+      width: 30%;
+    }
+    p:nth-of-type(1) {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    p:nth-of-type(2) {
+        line-height: 2;
+    }
+  }
+}

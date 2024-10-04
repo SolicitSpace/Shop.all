@@ -1,1 +1,17 @@
-<p>products-list works!</p>
+<div class="container">
+    <div class="top-section">
+        <p class="title">Featured Products</p>
+        <div class="nav-btn-container">
+            <p-button class="btn-white shop-now-btn" label="View All Products" icon="pi pi-arrow-right"
+                iconPos="right"></p-button>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <div class="product-list-container">
+
+            <ng-container *ngFor="let product of productsList">
+                <app-product [productDetails]="product"></app-product>
+            </ng-container>
+        </div>
+    </div>
+</div>
