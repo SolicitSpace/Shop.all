@@ -7,9 +7,9 @@
   width: 80%;
   height: 80%;
 
-//   display: flex;
+  //   display: flex;
 
-   .form-containers {
+  .form-containers {
     position: absolute;
     width: 60%;
     height: 100%;
@@ -18,6 +18,64 @@
     // flex: 1;
     background: red;
     .login-form-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      text-align: center;
+      .title-container {
+        font-size: 2rem;
+        color: rgb(84, 158, 145);
+        font-weight: 500;
+      }
+      .socials-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0;
+        div {
+          margin: 0 3%;
+
+          i {
+            color: #252525;
+            border: solid 1px lightgrey;
+            padding: 0.6rem;
+            border-radius: 255px;
+            // font-size: 1.4rem;
+          }
+        }
+      }
+      .desc-container {
+        position: relative;
+        margin-top: 6%;
+        color: lightgray;
+        line-height: 1.6;
+        font-size: 0.8rem;
+      }
+
+      .form-container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: 2.4% 0;
+
+        p-iconField {
+          margin: 1.2% 0;
+        }
+      }
+      .forget-pwd-txt {
+        position: relative;
+        margin-top: 6%;
+        color: #252525;
+        font-size: 1.0rem;
+      }
+
+      .btns-container {
+        position: relative;
+        margin-top: 6%;
+      }
     }
     .register-form-container {
     }
@@ -33,12 +91,24 @@
     z-index: 10;
     // flex: 0.5;
     background: grey;
+    display: FLEX;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     .title-container {
       font-size: 2rem;
+      color: white;
+      font-weight: 500;
     }
     .desc-container {
+      position: relative;
+      margin-top: 6%;
+      color: white;
+      line-height: 1.6;
     }
     .btns-container {
+      position: relative;
+      margin-top: 6%;
     }
   }
 
@@ -59,7 +129,6 @@
   font-weight: bold;
   font-size: 20px;
 }
-
 
 //--------------------
 .test {

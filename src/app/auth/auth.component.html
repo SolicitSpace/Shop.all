@@ -8,13 +8,47 @@
 <div class="panel-container">
 
     <div class="form-containers" [@manageFormContainer]="isOpen ? 'showLogin' : 'showRegister'">
-        <div class="login-form-container"></div>
+        <div class="login-form-container">
+            <div class="title-container">Sign In to Shop.All</div>
+            <div class="socials-container">
+                <div class="fb-container">
+                    <i class="pi pi-facebook"></i>
+                </div>
+                <div class="g+-container">
+                    <i class="pi pi-google"></i>
+
+                </div>
+                <div class="linkedin-container">
+                    <i class="pi pi-linkedin"></i>
+
+                </div>
+            </div>
+            <div class="desc-container">or use email account:</div>
+            <div class="form-container">
+                <p-iconField iconPosition="left">
+                    <p-inputIcon styleClass="pi pi-envelope" />
+                    <input type="text" pInputText placeholder="Email" />
+                </p-iconField>
+                <p-iconField iconPosition="left">
+                    <p-inputIcon styleClass="pi pi-lock" />
+                    <input type="text" pInputText placeholder="Password" />
+                </p-iconField>
+            </div>
+            <div class="forget-pwd-txt">
+                Forgot your password?
+            </div>
+            <div class="btns-container">
+                <p-button class="btn-white shop-now-btn sign-in-btn" label="SIGN IN" icon="" iconPos="right"></p-button>
+            </div>
+        </div>
         <div class="register-form-container"></div>
     </div>
     <div class="greetings-container" [@manageGreetingsContainer]="isOpen ? 'showLogin' : 'showRegister'">
-        <div class="title-container">This is a test to check</div>
-        <div class="desc-container"></div>
-        <div class="btns-container"></div>
+        <div class="title-container">Hello, Friend!</div>
+        <div class="desc-container">Enter your personal details <br> and start journey with us</div>
+        <div class="btns-container">
+            <p-button class="btn-white shop-now-btn sign-up-btn" label="SIGN UP" icon="" iconPos="right"></p-button>
+        </div>
     </div>
 
     <!-- <div class="logo-container">

@@ -84,3 +84,21 @@ body {
     width: 100%;
   }
 }
+
+// 
+.sign-up-btn {
+  button {
+    background-color: transparent;
+    border: solid 1px white;
+    border-radius: 255px;
+    width: 50%;
+  }
+}
+.sign-in-btn {
+  button {
+    background-color: transparent;
+    background-color: rgb(61, 169, 150);
+    border-radius: 255px;
+    width: 50%;
+  }
+}

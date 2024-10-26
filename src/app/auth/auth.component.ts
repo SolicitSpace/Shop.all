@@ -14,6 +14,12 @@ import {
   keyframes,
   // ...
 } from '@angular/animations';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+
+import { InputIconModule } from 'primeng/inputicon';
+import { IconFieldModule } from 'primeng/iconfield';
+
 
 const fadeAnimation = animation(
   [
@@ -26,7 +32,14 @@ const fadeAnimation = animation(
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [LoginComponent, RegisterComponent],
+  imports: [
+    LoginComponent,
+    RegisterComponent,
+    ButtonModule,
+    InputTextModule,
+    InputIconModule,
+    IconFieldModule,
+  ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss',
   animations: [
