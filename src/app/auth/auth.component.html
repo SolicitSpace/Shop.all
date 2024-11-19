@@ -1,72 +1,159 @@
-<p>auth works!</p>
-
-
 <!-- <app-login></app-login>
 <app-register></app-register> -->
 
+<div class="auth-bg-img-container">
+  <img class="bg-img" src="assets/bg.jpg" />
+</div>
 
 <div class="panel-container">
-
-    <div class="form-containers" [@manageFormContainer]="isOpen ? 'showLogin' : 'showRegister'">
-        <div class="login-form-container">
-            <div class="title-container">Sign In to Shop.All</div>
-            <div class="socials-container">
-                <div class="fb-container">
-                    <i class="pi pi-facebook"></i>
-                </div>
-                <div class="g+-container">
-                    <i class="pi pi-google"></i>
-
-                </div>
-                <div class="linkedin-container">
-                    <i class="pi pi-linkedin"></i>
-
-                </div>
-            </div>
-            <div class="desc-container">or use email account:</div>
-            <div class="form-container">
-                <p-iconField iconPosition="left">
-                    <p-inputIcon styleClass="pi pi-envelope" />
-                    <input type="text" pInputText placeholder="Email" />
-                </p-iconField>
-                <p-iconField iconPosition="left">
-                    <p-inputIcon styleClass="pi pi-lock" />
-                    <input type="text" pInputText placeholder="Password" />
-                </p-iconField>
-            </div>
-            <div class="forget-pwd-txt">
-                Forgot your password?
-            </div>
-            <div class="btns-container">
-                <p-button class="btn-white shop-now-btn sign-in-btn" label="SIGN IN" icon="" iconPos="right"></p-button>
-            </div>
+  <div
+    class="form-containers"
+    [@manageFormContainer]="isOpen ? 'showLogin' : 'showRegister'"
+  >
+    <ng-container >
+      <div
+        class="login-form-container"
+        [ngClass]="
+          isOpen ? 'swap-in-for-signin-form' : 'swap-out-for-signin-form'
+        "
+      >
+        <div class="title-container">Sign In to Shop.All</div>
+        <div class="socials-container">
+          <div class="fb-container">
+            <i class="pi pi-facebook"></i>
+          </div>
+          <div class="g+-container">
+            <i class="pi pi-google"></i>
+          </div>
+          <div class="linkedin-container">
+            <i class="pi pi-linkedin"></i>
+          </div>
         </div>
-        <div class="register-form-container"></div>
-    </div>
-    <div class="greetings-container" [@manageGreetingsContainer]="isOpen ? 'showLogin' : 'showRegister'">
-        <div class="title-container">Hello, Friend!</div>
-        <div class="desc-container">Enter your personal details <br> and start journey with us</div>
+        <div class="desc-container">or use email account:</div>
+        <div class="form-container">
+          <p-iconField iconPosition="left">
+            <p-inputIcon styleClass="pi pi-envelope" />
+            <input type="text" pInputText placeholder="Email" />
+          </p-iconField>
+          <p-iconField iconPosition="left">
+            <p-inputIcon styleClass="pi pi-lock" />
+            <input type="text" pInputText placeholder="Password" />
+          </p-iconField>
+        </div>
+        <div class="forget-pwd-txt">Forgot your password?</div>
         <div class="btns-container">
-            <p-button class="btn-white shop-now-btn sign-up-btn" label="SIGN UP" icon="" iconPos="right"></p-button>
+          <p-button
+            class="btn-white shop-now-btn sign-in-btn"
+            label="SIGN IN"
+            icon=""
+            iconPos="right"
+          ></p-button>
         </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isFirstPageLoad" >
+      <div
+        class="register-form-container"
+        [ngClass]="
+          isOpen ? 'swap-out-for-signup-form' : 'swap-in-for-signup-form'
+        "
+      >
+        <div class="title-container">Create Account</div>
+        <div class="socials-container">
+          <div class="fb-container">
+            <i class="pi pi-facebook"></i>
+          </div>
+          <div class="g+-container">
+            <i class="pi pi-google"></i>
+          </div>
+          <div class="linkedin-container">
+            <i class="pi pi-linkedin"></i>
+          </div>
+        </div>
+        <div class="desc-container">or use email for registration</div>
+        <div class="form-container">
+          <p-iconField iconPosition="left">
+            <p-inputIcon styleClass="pi pi-user" />
+            <input type="text" pInputText placeholder="Name" />
+          </p-iconField>
+          <p-iconField iconPosition="left">
+            <p-inputIcon styleClass="pi pi-envelope" />
+            <input type="text" pInputText placeholder="Email" />
+          </p-iconField>
+          <p-iconField iconPosition="left">
+            <p-inputIcon styleClass="pi pi-lock" />
+            <input type="text" pInputText placeholder="Password" />
+          </p-iconField>
+        </div>
+        <div class="forget-pwd-txt">Forgot your password?</div>
+        <div class="btns-container">
+          <p-button
+            class="btn-white shop-now-btn sign-in-btn"
+            label="SIGN IN"
+            icon=""
+            iconPos="right"
+          ></p-button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div
+    class="greetings-container"
+    [@manageGreetingsContainer]="isOpen ? 'showLogin' : 'showRegister'"
+  >
+    <div class="bg-img-container">
+      <img class="bg-img" src="assets/banner-bgimg.jpg" />
     </div>
 
-    <!-- <div class="logo-container">
+    <ng-container>
+      <div
+        class="def"
+        [ngClass]="
+          isOpen ? 'swap-in-for-signin-texts' : 'swap-out-for-signin-texts'
+        "
+      >
+        <div class="title-container">Hello, Friend!</div>
+        <div class="desc-container">
+          Enter your personal details <br />
+          and start journey with us
+        </div>
+        <div class="btns-container">
+          <p-button
+            class="btn-white shop-now-btn sign-up-btn"
+            label="SIGN UP"
+            icon=""
+            iconPos="right"
+            (click)="toggleView()"
+          ></p-button>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isFirstPageLoad">
+      <div
+        class="def signup-default"
+        [ngClass]="
+          isOpen ? 'swap-out-for-signup-texts' : 'swap-in-for-signup-texts'
+        "
+      >
+        <div class="title-container">Welcome Back!</div>
+        <div class="desc-container">
+          To keep connected with us please<br />
+          login with your personal info
+        </div>
+        <div class="btns-container">
+          <p-button
+            class="btn-white shop-now-btn sign-up-btn"
+            label="SIGN IN"
+            icon=""
+            iconPos="right"
+            (click)="toggleView()"
+          ></p-button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- <div class="logo-container">
         <img src="assets/logo.jpg" alt="logo" />
     </div> -->
 </div>
-
-
-
-<!-- <button (click)="nextPlease()">Next</button> -->
-
-
-<nav>
-    <button type="button" (click)="toggle()">Toggle Open/Close</button>
-</nav>
-
-
-<!-- Demo for ng animation -->
-<!-- <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
-    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
-</div> -->

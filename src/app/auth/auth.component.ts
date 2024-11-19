@@ -19,6 +19,7 @@ import { InputTextModule } from 'primeng/inputtext';
 
 import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
+import { CommonModule } from '@angular/common';
 
 
 const fadeAnimation = animation(
@@ -39,20 +40,12 @@ const fadeAnimation = animation(
     InputTextModule,
     InputIconModule,
     IconFieldModule,
+    CommonModule
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss',
   animations: [
     trigger('manageFormContainer', [
-      // transition(':enter', [
-      //   useAnimation(fadeAnimation, {
-      //     params: {
-      //       time: '2s',
-      //       start: 1,
-      //       end: 0,
-      //     },
-      //   }),
-      // ]),
       state(
         'showLogin',
         style({
@@ -128,7 +121,7 @@ const fadeAnimation = animation(
     //       height: '200px',
     //       opacity: 1,
     //       backgroundColor: 'yellow',
-    //     })
+    //     })x` 
     //   ),
     //   state(
     //     'closed',
@@ -144,9 +137,11 @@ const fadeAnimation = animation(
   ],
 })
 export class AuthComponent {
+  isFirstPageLoad = false
   isOpen = true;
 
-  toggle() {
+  toggleView() {
+    this.isFirstPageLoad = true;
     this.isOpen = !this.isOpen;
   }
 
